@@ -1,1 +1,1 @@
-# git_config
+# emacs_config
