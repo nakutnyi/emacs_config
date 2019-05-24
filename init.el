@@ -31,19 +31,18 @@
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
 ;(autoload 'ibuffer "ibuffer" "List buffers." t)
-(setq-default indent-tabs-mode t)
-(setq-default tab-width 4) ; Assuming you want your tabs to be four spaces wide
-(defvaralias 'c-basic-offset 'tab-width)
+;(setq-default indent-tabs-mode t)
+;(setq-default tab-width 4) ; Assuming you want your tabs to be four spaces wide
+;(defvaralias 'c-basic-offset 'tab-width)
 
-(add-hook 'c-mode-common-hook
-    (lambda ()
-      (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
-  (ggtags-mode 1))))
+;(add-hook 'c-mode-common-hook
+;    (lambda ()
+;      (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+;  (ggtags-mode 1))))
 
 
-(add-hook 'dired-mode-hook 'ggtags-mode)
+;(add-hook 'dired-mode-hook 'ggtags-mode)
 
 (require 'package)
 (add-to-list 'package-archives
@@ -63,4 +62,7 @@
                  (let ((mark-even-if-inactive transient-mark-mode))
                    (indent-region (region-beginning) (region-end) nil))))))
 
-(global-set-key (kbd "C-c b") 'bookmark-insert)
+;Set keys
+(global-set-key (kbd "C-c t") 'bookmark-insert)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(put 'upcase-region 'disabled nil)
