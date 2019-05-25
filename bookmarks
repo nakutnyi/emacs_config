@@ -1,0 +1,15 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("selftest_py"
+ (filename . "~/.emacs.d/templates/selftest_py")
+ (front-context-string)
+ (rear-context-string . "_ == '__main__':")
+ (position . 27))
+("hashbang_py3"
+ (filename . "~/.emacs.d/templates/hashbang_py3")
+ (front-context-string)
+ (rear-context-string . "env python3\n\n\"\"\"")
+ (position . 28))
+)
