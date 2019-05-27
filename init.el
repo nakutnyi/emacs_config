@@ -32,7 +32,7 @@
 (setq ido-everywhere t)
 (ido-mode 1)
 ;(autoload 'ibuffer "ibuffer" "List buffers." t)
-(setq-default indent-tabs-mode t)
+;(setq-default indent-tabs-mode t)
 (setq-default tab-width 4) ; Assuming you want your tabs to be four spaces wide
 (defvaralias 'c-basic-offset 'tab-width)
 
@@ -44,7 +44,10 @@
 
 ;(add-hook 'dired-mode-hook 'ggtags-mode)
 
+;; Tell emacs where is your personal elisp lib dir
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 (require 'package)
+
 (add-to-list 'package-archives
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
@@ -66,3 +69,5 @@
 (global-set-key (kbd "C-c t") 'bookmark-insert)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (put 'upcase-region 'disabled nil)
+
+(require 'sr-speedbar)
